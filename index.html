@@ -451,7 +451,115 @@
     }
 
     /* ===========================
-       6. CTA メインセクション
+       6. 概要セクション
+    =========================== */
+    .overview__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 32px;
+    }
+
+    .overview__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .overview__item:last-child {
+      border-bottom: none;
+    }
+
+    .overview__icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .overview__label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gray-600);
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .overview__value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    .overview__dates {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .overview__date-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .overview__date-badge {
+      display: inline-block;
+      background: var(--navy-light);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+
+    .overview__date-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .overview__notes {
+      background: var(--gray-100);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .overview__note {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.75;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .overview__note--warn {
+      color: #7d4200;
+    }
+
+    .overview__note-icon {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ===========================
+       7. CTA メインセクション
     =========================== */
     .cta-main__heading {
       font-size: clamp(1.3rem, 3vw, 1.9rem);
@@ -483,7 +591,7 @@
     }
 
     /* ===========================
-       7. 追伸 P.S.
+       8. 追伸 P.S.
     =========================== */
     .ps-section {
       border-top: 2px dashed var(--gray-200);
@@ -838,7 +946,90 @@
 
 
   <!-- ========================================
-       6. CTA メインセクション
+       6. 概要セクション
+  ======================================== -->
+  <section class="section section--gray" aria-labelledby="overview-heading">
+    <div class="container">
+
+      <h2 class="section-title" id="overview-heading">概要</h2>
+
+      <ul class="overview__list" role="list">
+
+        <li class="overview__item" role="listitem">
+          <div class="overview__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div>
+            <p class="overview__label">開催日時</p>
+            <div class="overview__dates">
+              <div class="overview__date-item">
+                <span class="overview__date-badge">5/19 火</span>
+                <span class="overview__date-text">19:00〜20:30</span>
+              </div>
+              <div class="overview__date-item">
+                <span class="overview__date-badge">5/21 木</span>
+                <span class="overview__date-text">19:00〜20:30</span>
+              </div>
+              <div class="overview__date-item">
+                <span class="overview__date-badge">5/22 金</span>
+                <span class="overview__date-text">19:00〜20:30</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="overview__item" role="listitem">
+          <div class="overview__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 10l4.553-2.069A1 1 0 0121 8.87V15.13a1 1 0 01-1.447.9L15 14M3 8h12v8H3a1 1 0 01-1-1V9a1 1 0 011-1z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="overview__label">場所</p>
+            <p class="overview__value">オンライン</p>
+          </div>
+        </li>
+
+        <li class="overview__item" role="listitem">
+          <div class="overview__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="overview__label">進め方</p>
+            <p class="overview__value">インストールでの疑問、不明点、つまずきを解消します</p>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class="overview__notes" role="note" aria-label="補足事項">
+        <p class="overview__note">
+          <span class="overview__note-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </span>
+          アーカイブもお渡しします
+        </p>
+        <p class="overview__note overview__note--warn">
+          <span class="overview__note-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7d4200" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </span>
+          皆様の課題・悩みがサポートの材料となりますので、参加者0の回はアーカイブ配布ができなくなります。あらかじめご承知おきください。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       7. CTA メインセクション（CTAボタン②）
   ======================================== -->
   <section class="section" aria-labelledby="cta-main-heading">
     <div class="container">
@@ -866,7 +1057,7 @@
 
 
   <!-- ========================================
-       7. 追伸 P.S.
+       8. 追伸 P.S.
   ======================================== -->
   <section class="section section--gray ps-section" aria-labelledby="ps-heading">
     <div class="container">
@@ -899,7 +1090,7 @@
 
 
   <!-- ========================================
-       8. フッターCTA
+       9. フッターCTA
   ======================================== -->
   <section class="footer-cta" aria-labelledby="footer-cta-heading">
     <div class="container">
